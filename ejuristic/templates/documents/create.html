@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/ html; charset=utf-8"/>
@@ -7,16 +8,16 @@
     <style>
         @font-face {
             font-family: "Alice-Regular";
-            src: url("C:/Dev/e-juristic/ejuristic/static/fonts/timesnrcyrmt.ttf") format("truetype");
+            src: url("{{ STATIC_URL }}fonts/Arial.ttf") format("Arial");
         }
 
         body {
-            font-family: "timesnrcyrmt";
+            font-family: "Arial";
             font-size: 20px
         }
 
         div {
-            font-family: "timesnrcyrmt";
+            font-family: "Arial";
             font-size: 20px
         }
     </style>
@@ -32,3 +33,5 @@
 {#{% endfor %}#}
 </body>
 </html>
+
+
