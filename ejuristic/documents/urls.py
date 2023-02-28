@@ -7,5 +7,8 @@ app_name = "documents"
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("download/", DownloadView.as_view(), name="download"),
-    path('canvas/', generate_pdf_canvas, name='court_order_create2'),
+    path('canvas/', generate_pdf_canvas, name='court_order_create'),
+    path('test/', resume_pdf, name='court_order_create_test'),
 ]
+
+
