@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Домашняя страница</title>
-</head>
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Колонка
+    </div>
+    <div class="col">
+      Колонка
+    </div>
+    <div class="col">
+      Колонка
+    </div>
+  </div>
+</div>
 <body>
 Заглушка домашней страницы
 <br>
 {#<a href="{% url 'documents:court_order_create' %}">приказ</a>#}
 <a href="{% url 'documents:court_order_create_test' %}">TEST</a>
-</body>
-</html>
+{% endblock %}

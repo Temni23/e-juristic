@@ -19,7 +19,7 @@ class DownloadView(TemplateView):
 
 
 def resume_pdf(request, *args, **kwargs):
-    """Генерит PDF файл используя wkhtmltopdf."""
+    """Формирует и отправляет пользователю PDF файл по заполненной форме."""
     if request.method == 'POST':
         form = CourtOrderForm(request.POST)
         if form.is_valid():
@@ -51,8 +51,6 @@ def resume_pdf(request, *args, **kwargs):
                 'footer-font-size': '10',
             }
 
-            # template_path = 'documents/user_printer.html'
-            # template = get_template(template_path)  # request.path для текущего пути
             date_create = datetime.now()
 
             context = {
@@ -69,11 +67,6 @@ def resume_pdf(request, *args, **kwargs):
                 "court_order_date_receipt": court_order_date_receipt,
                 "date_create": date_create.date(),
             }
-            # html = template.render(context)
-            #
-            # config = pdfkit.configuration(wkhtmltopdf=wkhtml_to_pdf)
-            #
-            # pdf = pdfkit.from_string(html, False, configuration=config, options=options)
 
             pdf = draw_ticket_to_pdf(context)
 
@@ -82,9 +75,7 @@ def resume_pdf(request, *args, **kwargs):
 
             response[
                 'Content-Disposition'] = 'attachment; filename="resume.pdf"'
-            # print(response.status_code)
-            # if response.status_code != 200:
-            #     return HttpResponse('We had some errors <pre>' + html + '</pre>')
+
             return response
 
     else:

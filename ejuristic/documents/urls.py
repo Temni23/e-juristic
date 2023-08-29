@@ -9,5 +9,3 @@ urlpatterns = [
     path("download/", DownloadView.as_view(), name="download"),
     path('test/', resume_pdf, name='court_order_create_test'),
 ]
-
-
