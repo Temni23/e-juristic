@@ -1,22 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
-{% load static %}
-<div class="container">
-  <div class="row">
-    <div class="col">
-      Колонка
+    {% load static %}
+    <div class="container-sm">
+        <div class="row-cols-xl-5">
+            <div class="col-1">
+                Колонка
+            </div>
+            <div class="col-1">
+                Колонка
+            </div>
+            <div class="col-1">
+                Колонка
+            </div>
+        </div>
     </div>
-    <div class="col">
-      Колонка
+    <body>
+    Заглушка домашней страницы
+    <br>
+    {#<a href="{% url 'documents:court_order_create' %}">приказ</a>#}
+    <a href="{% url 'documents:court_order_create_test' %}">TEST</a>
+
+    <br>
+
+    <button id="openModal">Открыть форму</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заголовок формы</h2>
+            <form>
+                <!-- Поля вашей формы здесь -->
+                <input type="text" name="name" placeholder="Имя">
+
+                <input type="email" name="email" placeholder="Email">
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
     </div>
-    <div class="col">
-      Колонка
-    </div>
-  </div>
-</div>
-<body>
-Заглушка домашней страницы
+
+    <br>
+
+    <div id="zatemnenie">
+    <div id="okno">
+        Всплывающее окошко!<br>
+            <form>
+                <!-- Поля вашей формы здесь -->
+                <input type="text" name="name" placeholder="Имя">
 <br>
-{#<a href="{% url 'documents:court_order_create' %}">приказ</a>#}
-<a href="{% url 'documents:court_order_create_test' %}">TEST</a>
+                <input type="email" name="email" placeholder="Email">
+<br>
+                <button type="submit">Отправить</button>
+            </form>
+
+    </div>
+        <a href="#" class="openModal">Закрыть окно</a>
+    </div>
+</div>
+
+
+
+    <button class="myModal" ><a href="#zatemnenie">Вызвать всплывающее окно</a></button>
+
+    </body>
+
+
 {% endblock %}
