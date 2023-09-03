@@ -1,41 +1,68 @@
-{% if page_obj.has_other_pages %}
-    <nav aria-label="Page navigation" class="my-5">
-        <ul class="pagination">
-            {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page=1">Первая</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link"
-                       href="?page={{ page_obj.previous_page_number }}">
-                        Предыдущая
-                    </a>
-                </li>
-            {% endif %}
-            {% for i in page_obj.paginator.page_range %}
-                {% if page_obj.number == i %}
-                    <li class="page-item active">
-                        <span class="page-link">{{ i }}</span>
-                    </li>
-                {% else %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ i }}">{{ i }}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-            {% if page_obj.has_next %}
-                <li class="page-item">
-                    <a class="page-link"
-                       href="?page={{ page_obj.next_page_number }}">
-                        Следующая
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link"
-                       href="?page={{ page_obj.paginator.num_pages }}">
-                        Последняя
-                    </a>
-                </li>
-            {% endif %}
-        </ul>
-    </nav>
-{% endif %}
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    <div class="container-sm">
+        <div class="row-cols-xl-5">
+            <div class="col-1">
+                Колонка
+            </div>
+            <div class="col-1">
+                Колонка
+            </div>
+            <div class="col-1">
+                Колонка
+            </div>
+        </div>
+    </div>
+    <body>
+    Заглушка домашней страницы
+    <br>
+    {#<a href="{% url 'documents:court_order_create' %}">приказ</a>#}
+    <a href="{% url 'documents:court_order_create_test' %}">TEST</a>
+
+    <br>
+
+    <button id="openModal">Открыть форму</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заголовок формы</h2>
+            <form>
+                <!-- Поля вашей формы здесь -->
+                <input type="text" name="name" placeholder="Имя">
+
+                <input type="email" name="email" placeholder="Email">
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="zatemnenie">
+    <div id="okno">
+        Всплывающее окошко!<br>
+            <form>
+                <!-- Поля вашей формы здесь -->
+                <input type="text" name="name" placeholder="Имя">
+<br>
+                <input type="email" name="email" placeholder="Email">
+<br>
+                <button type="submit">Отправить</button>
+            </form>
+
+    </div>
+        <a href="#" class="openModal">Закрыть окно</a>
+    </div>
+</div>
+
+
+
+    <button class="myModal" ><a href="#zatemnenie">Вызвать всплывающее окно</a></button>
+
+    </body>
+
+
+{% endblock %}

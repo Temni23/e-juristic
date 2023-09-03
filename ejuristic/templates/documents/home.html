@@ -1,68 +1,207 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-    {% load static %}
-    <div class="container-sm">
-        <div class="row-cols-xl-5">
-            <div class="col-1">
-                Колонка
-            </div>
-            <div class="col-1">
-                Колонка
-            </div>
-            <div class="col-1">
-                Колонка
-            </div>
-        </div>
-    </div>
-    <body>
-    Заглушка домашней страницы
-    <br>
-    {#<a href="{% url 'documents:court_order_create' %}">приказ</a>#}
-    <a href="{% url 'documents:court_order_create_test' %}">TEST</a>
+<main>
+        <section class="ant-section__ant110_service">
 
-    <br>
+			<div class="container">
 
-    <button id="openModal">Открыть форму</button>
+				<div class="row d-flex align-items-center">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+						<div class="ant110_service-servies-tittle ant110_service-mb-80">
+							<span>что предлагаем</span>
+							<h3>Услуги</h3>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+						<div class="ant110_service-services-btn text-right ant110_service-mb-80">
+							<a href="#" class="btn ant110_service-theme-btn2">Смотреть все</a>
+						</div>
+					</div>
+				</div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Заголовок формы</h2>
-            <form>
-                <!-- Поля вашей формы здесь -->
-                <input type="text" name="name" placeholder="Имя">
+				<div class="row">
+					<div class="col-xl-12 ant110_service-mb-30">
+						<ul class="nav nav-pills ant110_service-mb-65" id="ant110_service-pills-tab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link" id="ant110_service-pills-home-tab" data-toggle="pill" href="#ant110_service-pills-home" role="tab"
+									aria-controls="ant110_service-pills-home" aria-selected="true">
+									<i class="fab fa-android"></i>
+									<h6>Разработка</h6>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" id="ant110_service-pills-profile-tab" data-toggle="pill" href="#ant110_service-pills-profile" role="tab"
+									aria-controls="ant110_service-pills-profile" aria-selected="false">
+									<i class="fab fa-apple"></i>
+									<h6>Дизайн</h6>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="ant110_service-pills-contact-tab" data-toggle="pill" href="#ant110_service-pills-contact" role="tab"
+									aria-controls="ant110_service-pills-contact" aria-selected="false">
+									<i class="fab fa-apper"></i>
+									<h6>Маркетинг</h6>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="ant110_service-pills-contact-tab" data-toggle="pill" href="#a" role="tab"
+									aria-controls="a" aria-selected="false">
+									<i class="fab fa-angular"></i>
+									<h6>Технологии</h6>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="ant110_service-pills-contact-tab" data-toggle="pill" href="#b" role="tab"
+									aria-controls="b" aria-selected="false">
+									<i class="fab fa-cc-visa"></i>
+									<h6>Поддержка</h6>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="ant110_service-pills-contact-tab" data-toggle="pill" href="#c" role="tab"
+									aria-controls="b" aria-selected="false">
+									<i class="fab fa-autoprefixer"></i>
+									<h6>Другое</h6>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="ant110_service-tabs-content-wrapper">
+								<div class="tab-content" id="ant110_service-pills-tabContent">
+									<div class="tab-pane fade" id="ant110_service-pills-home" role="tabpanel" aria-labelledby="ant110_service-pills-home-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-4">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static
+                                                            "img/working.jpg" %}"
+                                                         alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-8">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade show active" id="ant110_service-pills-profile" role="tabpanel" aria-labelledby="ant110_service-pills-profile-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-6">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static "img/working.jpg" %}"
+                                                         alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-6">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="ant110_service-pills-contact" role="tabpanel" aria-labelledby="ant110_service-pills-contact-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-4">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static
+                                                            "img/working.jpg" %}" alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-8">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="a" role="tabpanel" aria-labelledby="ant110_service-pills-contact-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-4">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static
+                                                            "img/working.jpg" %}" alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-8">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="ant110_service-pills-contact-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-4">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static
+                                                            "img/working.jpg" %}" alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-8">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="ant110_service-pills-contact-tab">
+										<div class="row">
+											<div class="col-xl-6 col-lg-4">
+												<div class="ant110_service-depertment-img ant110_service-mb-30">
+													<img src="{% static
+                                                            "img/working.jpg" %}" alt="">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-8">
+												<div class="ant110_service-section-title ant110_service-mb-40">
+													<div class="ant110_service-depertment-tittle">
+														<h5>Суперуслуга</h5>
+														<h1>Почему неоднозначен рекламный макет?</h1>
+														<p>Эволюция мерчандайзинга выражена наиболее полно. План размещения парадоксально ускоряет комплексный пак-шот. Тем не менее, создание приверженного покупателя усиливает департамент маркетинга и продаж. Изменение глобальной стратегии непосредственно консолидирует коллективный жизненный цикл продукции. Пак-шот, следовательно, отражает потребительский комплексный анализ ситуации.</p>
+													</div>
+													<a href="#" class="btn ant110_service-theme-btn3">Начать работу</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <input type="email" name="email" placeholder="Email">
+		</section>
 
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-    </div>
-
-    <br>
-
-    <div id="zatemnenie">
-    <div id="okno">
-        Всплывающее окошко!<br>
-            <form>
-                <!-- Поля вашей формы здесь -->
-                <input type="text" name="name" placeholder="Имя">
-<br>
-                <input type="email" name="email" placeholder="Email">
-<br>
-                <button type="submit">Отправить</button>
-            </form>
-
-    </div>
-        <a href="#" class="openModal">Закрыть окно</a>
-    </div>
-</div>
-
-
-
-    <button class="myModal" ><a href="#zatemnenie">Вызвать всплывающее окно</a></button>
-
-    </body>
+</main>
 
 
 {% endblock %}

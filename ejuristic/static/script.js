@@ -1,29 +1,47 @@
-let page = document.querySelector('.page');
-let themeButton = document.querySelector('.theme-button');
+(function ($) {
+    "use strict";
 
-themeButton.onclick = function () {
-    page.classList.toggle('light-theme');
-    page.classList.toggle('dark-theme');
-};
+    $(document).ready(function () {
 
-// Получаем необходимые элементы
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("openModal");
-var span = document.getElementsByClassName("close")[0];
+        if ($('.ant019_header-main-header li.dropdown ul').length) {
+            $('.ant019_header-main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
 
-// Открываем модальное окно при клике на кнопку
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+            //Dropdown Button
+            $('.ant019_header-main-header li.dropdown .dropdown-btn').on('click', function () {
+                $(this).prev('ul').slideToggle(500);
+            });
 
-// Закрываем модальное окно при клике на крестик
-span.onclick = function () {
-    modal.style.display = "none";
-}
+            //Dropdown Menu / Fullscreen Nav
+            $('.fullscreen-menu .ant019_header-navigation li.dropdown > a').on('click', function () {
+                $(this).next('ul').slideToggle(500);
+            });
 
-// Закрываем модальное окно при клике вне его
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+            //Disable dropdown parent link
+            $('.ant019_header-navigation li.dropdown > a').on('click', function (e) {
+                e.preventDefault();
+            });
+
+            //Disable dropdown parent link
+            $('.ant019_header-main-header .ant019_header-navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function (e) {
+                e.preventDefault();
+            });
+        }
+    });
+})(jQuery);
+
+/*! version : 1.0.0 */
+
+jQuery( document ).ready(function($) {
+
+});
+
+(function ($) {
+    'use strict';
+
+    $(window).on('load', function () {
+
+
+
+    });
+
+})(jQuery);
