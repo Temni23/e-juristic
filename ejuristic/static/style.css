@@ -11,7 +11,7 @@
 .ant024_footer-footer-section {
     float: left;
     width: 100%;
-    padding: 50px 0 0 0;
+    padding: 0 0 0 0;
     color: #bababa;
     background: #191919;
 }
@@ -1807,7 +1807,7 @@ footer .ant024_footer-recent-post-date {
     background-position: center center;
     background-image: url(/static/img/bg.jpg);
     background-attachment: fixed;
-    padding: 100px 0;
+    padding: 35px 0;
 }
 
 .ant110_service-mb-80 {
@@ -1823,7 +1823,7 @@ footer .ant024_footer-recent-post-date {
 }
 
 .ant110_service-mb-30 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .ant110_service-servies-tittle span {
@@ -1899,8 +1899,8 @@ footer .ant024_footer-recent-post-date {
 
 .ant-section__ant110_service .nav-item {
     text-align: center;
-    margin-right: 30px;
-    width: 14.4%;
+    margin-right: 50px;
+    width: 16%;
     background: transparent;
 }
 
@@ -1960,7 +1960,7 @@ footer .ant024_footer-recent-post-date {
 
 .ant110_service-tabs-content-wrapper {
     background: #fff;
-    padding: 60px 0px 30px 60px;
+    padding: 30px 0px 10px 30px;
 }
 
 .ant110_service-depertment-tittle h5 {
@@ -1992,7 +1992,7 @@ footer .ant024_footer-recent-post-date {
 }
 
 .ant-section__ant110_service .nav-item a.nav-link i {
-    font-size: 55px;
+    font-size: 50px;
     color: #fff;
 }
 
