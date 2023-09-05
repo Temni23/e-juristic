@@ -81,3 +81,7 @@ def resume_pdf(request, *args, **kwargs):
     else:
         form = CourtOrderForm()
     return render(request, 'documents/court_order_form.html', {'form': form})
+
+
+def create_beat_collector():
+    pass
