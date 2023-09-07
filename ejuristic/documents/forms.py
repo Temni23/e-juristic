@@ -1,7 +1,7 @@
 from django import forms
 from django.utils import timezone
 
-from .constants import *
+from .constants import YEARS
 
 
 class CourtOrderForm(forms.Form):
