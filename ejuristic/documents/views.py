@@ -1,7 +1,5 @@
-import os
 from datetime import datetime
 
-from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
@@ -35,21 +33,6 @@ def resume_pdf(request, *args, **kwargs):
             debt_size = form.cleaned_data['debt_size']
             court_order_date_receipt = form.cleaned_data[
                 'court_order_date_receipt']
-            wkhtml_to_pdf = os.path.join(
-                settings.BASE_DIR, "wkhtmltopdf.exe")
-            options = {
-                'page-size': 'A4',
-                'page-height': "13in",
-                'page-width': "10in",
-                'margin-top': '1in',
-                'margin-right': '1in',
-                'margin-bottom': '1in',
-                'margin-left': '1in',
-                'encoding': "UTF-8",
-                'footer-right': 'Заявление подготовлено на сайте e-juristic.ru',
-                'footer-font-name': 'Georgia Italic',
-                'footer-font-size': '10',
-            }
 
             date_create = datetime.now()
 
@@ -80,4 +63,5 @@ def resume_pdf(request, *args, **kwargs):
 
     else:
         form = CourtOrderForm()
-    return render(request, 'documents/court_order_form.html', {'form': form})
+    return render(request, 'documents/court_order_form.html',
+                  {'form': form})
