@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import *
+from .views import HomeView, DownloadView, resume_pdf
 
 app_name = "documents"
 
